@@ -84,6 +84,14 @@ export function canManageVoiceChats(chatId) {
     return false;
 }
 
+export function canCreateSecretChat(chatId) {
+    const chat = ChatStore.get(chatId);
+    if (!chat) return false;
+    
+    return chat.type['@type'] == 'chatTypePrivate' ? true: false;
+}
+
+
 export function getChatSender(chatId) {
     const chat = ChatStore.get(chatId);
     if (!chat) return null;

@@ -44,7 +44,7 @@ class TdLibController extends EventEmitter {
             verbosity: 1,
             jsVerbosity: 3,
             fastUpdating: true,
-            useDatabase: false,
+            useDatabase: true,
             mode: 'wasm'
         };
 
@@ -150,9 +150,12 @@ class TdLibController extends EventEmitter {
             this.parameters.fastUpdating = stringToBoolean(params.get('fastupdating'));
         }
 
-        if (params.has('db')) {
-            this.parameters.useDatabase = stringToBoolean(params.get('db'));
+        if (params.has('disable_db')) {
+            this.parameters.useDatabase = !stringToBoolean(params.get('disable_db'));
         }
+
+        this.parameters.useDatabase = true;
+
         if (params.has('mode')) {
             this.parameters.mode = params.get('mode');
         }

@@ -99,7 +99,10 @@ export async function createSecretChat(chatId) {
     TdLibController.send({
         '@type': 'createNewSecretChat',
         user_id: chatId
-    });
+    })
+        .then(chat => {
+            TdLibController.setChatId(chat.id);
+        })
 }
 
 export function addChatToList(chatId, chatList) {

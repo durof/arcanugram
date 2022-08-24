@@ -22,9 +22,11 @@ import MoreVertIcon from '../../Assets/Icons/More';
 import PhoneIcon from '../../Assets/Icons/Phone';
 import UnpinIcon from '../../Assets/Icons/PinOff';
 import UserIcon from '../../Assets/Icons/User';
+import DataIcon from '../../Assets/Icons/Device';
 import {
     canClearHistory,
     canDeleteChat,
+    canCreateSecretChat,
     getViewInfoTitle,
     isPrivateChat,
     getDeleteChatTitle,
@@ -34,7 +36,7 @@ import {
     canManageVoiceChats,
     canBeReported, getChatUserId, canBeCalled
 } from '../../Utils/Chat';
-import { clearHistory, leaveChat, openReportChat } from '../../Actions/Chat';
+import { clearHistory, leaveChat, openReportChat, createSecretChat } from '../../Actions/Chat';
 import { requestBlockSender, unblockSender } from '../../Actions/Message';
 import { requestUnpinMessage, showAlert } from '../../Actions/Client';
 import AppStore from '../../Stores/ApplicationStore';
@@ -147,9 +149,17 @@ class MainMenuButton extends React.Component {
     handleReport = () => {
         this.handleMenuClose();
 
-        const { chatId } = this.props;
+        const { chatId } = this.props; // @durof: undefined variable
 
         openReportChat(chatId, []);
+    };
+
+    handleCreateSecretChat = () => {
+        this.handleMenuClose();
+
+        const chatId = AppStore.getChatId();
+
+        createSecretChat(chatId);
     };
 
     render() {
@@ -162,6 +172,7 @@ class MainMenuButton extends React.Component {
 
         const { is_blocked, voice_chat_group_call_id } = chat;
 
+        const secretChat = canCreateSecretChat(chatId);
         const clearHistory = canClearHistory(chatId);
         const deleteChat = canDeleteChat(chatId);
         const deleteChatTitle = getDeleteChatTitle(chatId, t);
@@ -212,12 +223,23 @@ class MainMenuButton extends React.Component {
                             <ListItemText primary={t('StartVoipChat')} />
                         </MenuItem>
                     )}
+
+                    {secretChat && (
+                        <MenuItem onClick={this.handleCreateSecretChat}>
+                            <ListItemIcon>
+                                <DataIcon />
+                            </ListItemIcon>
+                            <ListItemText primary='Secret Chat' />
+                        </MenuItem>
+                    )}
+                    
                     <MenuItem onClick={this.handleChatInfo}>
                         <ListItemIcon>
                             {isPrivateChat(chatId) ? <UserIcon /> : <GroupIcon />}
                         </ListItemIcon>
                         <ListItemText primary={getViewInfoTitle(chatId, t)} />
                     </MenuItem>
+                    
                     {clearHistory && (
                         <MenuItem onClick={this.handleClearHistory}>
                             <ListItemIcon>
