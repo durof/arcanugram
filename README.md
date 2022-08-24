@@ -1,4 +1,4 @@
-# Telegram Web App
+# Telegram Web App with support for secret chats
 
 ### Interface
 ![Sample screenshot](/src/Assets/Screenshots/1x_Group.png)
