@@ -223,9 +223,9 @@ class TdLibController extends EventEmitter {
                 device_model: getBrowser(),
                 system_version: getOSName(),
                 application_version: version,
-                use_secret_chats: false,
+                use_secret_chats: true,
                 use_message_database: true,
-                use_file_database: false,
+                use_file_database: true,
                 database_directory: '/db',
                 files_directory: '/'
             }

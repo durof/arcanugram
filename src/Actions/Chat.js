@@ -95,6 +95,13 @@ export async function getChat(chatId) {
     return chat;
 }
 
+export async function createSecretChat(chatId) {
+    TdLibController.send({
+        '@type': 'createNewSecretChat',
+        user_id: chatId
+    });
+}
+
 export function addChatToList(chatId, chatList) {
     TdLibController.send({
         '@type': 'addChatToList',
