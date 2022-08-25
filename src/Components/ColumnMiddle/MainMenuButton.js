@@ -22,7 +22,7 @@ import MoreVertIcon from '../../Assets/Icons/More';
 import PhoneIcon from '../../Assets/Icons/Phone';
 import UnpinIcon from '../../Assets/Icons/PinOff';
 import UserIcon from '../../Assets/Icons/User';
-import DataIcon from '../../Assets/Icons/Device';
+import DataIcon from '../../Assets/Icons/Data';
 import {
     canClearHistory,
     canDeleteChat,
