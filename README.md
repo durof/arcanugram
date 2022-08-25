@@ -1,6 +1,7 @@
-# [Arcanugram](https://duorf.github.io/arcanugram) – Unofficial Telegram Web App <sub>with support for secret chats</sub>
+# [Arcanugram](https://durof.github.io/arcanugram) – Unofficial Telegram Web App <sub>with support for secret chats</sub>
+⚠️ Made as a temporary solution for use on devices that do not have any clients that support secret chats.
 
-![Test image](https://telegra.ph/file/f3a47cd5fff903e3038c1.jpg)
+![Secret Chats Support](https://telegra.ph/file/f3a47cd5fff903e3038c1.jpg)
 
 ### Interface
 ![Sample screenshot](/src/Assets/Screenshots/1x_Group.png)
