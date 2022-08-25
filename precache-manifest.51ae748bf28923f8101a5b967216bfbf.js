@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "57de8ab49ceb30015dcbe8a83109fca7",
+    "revision": "9e4bd4e2bf239a8cdde49cbe64723c2a",
     "url": "/arcanugram/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/arcanugram/static/css/0.52c23fd6.chunk.css"
   },
   {
-    "revision": "03fdac47abb314dd68a7",
+    "revision": "d96eaf7ab5221889ae38",
     "url": "/arcanugram/static/css/4.121c166b.chunk.css"
   },
   {
@@ -32,8 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/arcanugram/static/js/3.c014426f.chunk.js"
   },
   {
-    "revision": "03fdac47abb314dd68a7",
-    "url": "/arcanugram/static/js/4.e64fd01d.chunk.js"
+    "revision": "d96eaf7ab5221889ae38",
+    "url": "/arcanugram/static/js/4.04d1b02c.chunk.js"
   },
   {
     "revision": "692ee679c55c1da317d8",
@@ -52,8 +52,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/arcanugram/static/js/main.d304f57f.chunk.js"
   },
   {
-    "revision": "82003f0b1005861f7ba8",
-    "url": "/arcanugram/static/js/runtime~main.265f8ead.js"
+    "revision": "a3b49687bb006dc2eff5",
+    "url": "/arcanugram/static/js/runtime~main.b109797b.js"
   },
   {
     "revision": "85479cc199de7ace1a44d901720601b8",
